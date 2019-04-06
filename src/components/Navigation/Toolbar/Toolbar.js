@@ -3,10 +3,11 @@ import React from 'react';
 import classes from './Toolbar.css';
 import Logo from "../../Logo/Logo";
 import NavigationItems from "../NavigationItems/NavigationItems";
+import Menu from "../SideDrawer/Menu/Menu";
 
 const toolbar = (props) => (
     <header className={classes.Toolbar}>
-        <div>MENU</div>
+        <Menu show={props.showMenu} clicked={props.closed} />
         <div className={classes.Logo}>
             <Logo />
         </div>
