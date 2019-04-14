@@ -21,7 +21,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: "Please enter a valid name"
             },
             street: {
                 elementType: 'input',
@@ -34,7 +35,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: "Please enter a valid street name"
             },
             zipCode: {
                 elementType: 'input',
@@ -49,7 +51,8 @@ class ContactData extends Component {
                     maxLength: 5
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: "Please enter a valid zip code"
             },
             country: {
                 elementType: 'input',
@@ -62,7 +65,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: "Please enter a valid country"
             },
             email: {
                 elementType: 'input',
@@ -75,7 +79,8 @@ class ContactData extends Component {
                     required: true
                 },
                 valid: false,
-                touched: false
+                touched: false,
+                errorMessage: "Please enter a valid email address"
             },
             deliveryMethod: {
                 elementType: 'select',
@@ -179,6 +184,7 @@ class ContactData extends Component {
                     invalid={!formElement.config.valid}
                     shouldValidate={formElement.config.validation}
                     touched={formElement.config.touched}
+                    errorMessage={formElement.config.errorMessage}
                     changed={(event) => this.inputChangedHandler(event, formElement.id)}
                 />
                 ))}
